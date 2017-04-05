@@ -40,6 +40,9 @@ build/Release
 node_modules/
 jspm_packages/
 
+# custom package inclusion
+!node_modules/simple-github/
+
 # Typescript v1 declaration files
 typings/
 
