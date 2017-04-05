@@ -1,0 +1,22 @@
+<div class="wrapper">
+    <header class="header">
+        <h1>{{header}} projects on GitHub!</h1>
+        {{#if error}}<p>{{error}}</p>{{/if}}
+        <ul class="flex-container">
+            {{#each body}}
+                {{#if name}}
+                    <li class="flex-item"><a href="{{this.html_url}}"><span class="hdr">{{name}}</span><br/><br/><span class="dtl">{{description}}</span></a></li>
+                {{/if}}
+            {{/each}}
+        </ul>
+
+    </header>
+
+    <footer>
+        <h3>This page is dynamically generated from my GitHub account!</h3>
+        <p><form action="/projects/github">
+            <label>See this for your github account: </label><input type="text" placeholder="Your GitHub Username" name="user">
+        </form></p>
+        <p>See how it works in my website project!</p>
+    </footer>
+</div>
